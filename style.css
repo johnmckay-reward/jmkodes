@@ -10,7 +10,7 @@ body, a, button {
     cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV5JREFUOE/tlU0oA1EUhM9/2B8wQRCr9Q8sLCwstLGwsNBYWNpqIwgWbFjoCyQtLQQjiGghWFhYKIgYWFjoG7+AYhAEf+A3sHk5yY1b2d3ZgV+228w3b/6+ZGa6ur/GbuuH14Tjscj6iOJz0mSRaC/zDCS9ApNb2W/Am8B2k72eEKIyAYfAdbDe5Ld2QBCyA3BrYNdM+wL2gIuH8zJ0eRj4Az4A7oA74dGcgQ2gDzgBXoDTq8kdYF9YvX6f0Q1IICeAOWB1WX+kJRcAz4F3wL3gCphd03Mgw8wB3wBnwFqT/aA1yG4CbwB7wLFwP4L1JIcK0ATcHZgCrgHzwLtwP/b54X0M/ADfS99S6Zz0nlwPdAflqYS7aWp3W0D/b1gTq60v4F5gL3gGfgOPgPtgP/A/eA7eC7yFLwK3gUvgS/Ae+A18Bb4dngffS1t/aB/3f4A/HwDC0AyrpGkAAAAASUVORK5CYII='), auto;
 }
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
     background-size: 400% 400%;
     animation: rainbowBackground 8s ease infinite;
