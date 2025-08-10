@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ JMKod.es - John McKay's Freelance Development ✨</title>
+    <meta name="description" content="John McKay, an experienced freelance software developer based in Belfast, NI. Specializing in C#, .NET, Angular, Node.js, and full-stack solutions. Available for hire!">
+    <meta name="keywords" content="freelance developer, software developer, C#, .NET, JavaScript, Angular, Node.js, full stack, web developer, belfast, northern ireland, john mckay, jmkod.es">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* --- THIS IS THE FIX --- */
+        /* Apply custom cursor to the body and interactive elements, not everything (*) */
+        body, a, button {
+            cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV5JREFUOE/tlU0oA1EUhM9/2B8wQRCr9Q8sLCwstLGwsNBYWNpqIwgWbFjoCyQtLQQjiGghWFhYKIgYWFjoG7+AYhAEf+A3sHk5yY1b2d3ZgV+228w3b/6+ZGa6ur/GbuuH14Tjscj6iOJz0mSRaC/zDCS9ApNb2W/Am8B2k72eEKIyAYfAdbDe5Ld2QBCyA3BrYNdM+wL2gIuH8zJ0eRj4Az4A7oA74dGcgQ2gDzgBXoDTq8kdYF9YvX6f0Q1IICeAOWB1WX+kJRcAz4F3wL3gCphd03Mgw8wB3wBnwFqT/aA1yG4CbwB7wLFwP4L1JIcK0ATcHZgCrgHzwLtwP/b54X0M/ADfS99S6Zz0nlwPdAflqYS7aWp3W0D/b1gTq60v4F5gL3gGfgOPgPtgP/A/eA7eC7yFLwK3gUvgS/Ae+A18Bb4dngffS1t/aB/3f4A/HwDC0AyrpGkAAAAASUVORK5CYII='), auto;
+        }
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
+            background-size: 400% 400%;
+            animation: rainbowBackground 8s ease infinite;
+            color: #000;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border: 5px solid #ff0000;
+            box-shadow: 0 0 20px #ff00ff;
+            animation: borderGlow 2s ease-in-out infinite alternate;
+        }
+        .header {
+            background: linear-gradient(90deg, #000080, #800080);
+            color: #ffff00;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px dashed #ff0000;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: "⭐✨💫⭐✨💫⭐✨💫⭐✨💫⭐✨💫";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            animation: sparkleScroll 5s linear infinite;
+            font-size: 20px;
+        }
+        .title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3em;
+            font-weight: 900;
+            text-shadow: 3px 3px 0 #ff0000, 6px 6px 0 #00ff00;
+            animation: titlePulse 2s ease-in-out infinite;
+            margin: 20px 0;
+        }
+        .subtitle { font-size: 1.2em; color: #00ffff; text-shadow: 2px 2px 0 #000; margin-bottom: 10px; }
+        .blink { animation: blinker 1s linear infinite; }
+        .navigation { background: #ffff00; border: 3px solid #ff0000; margin: 10px; text-align: center; padding: 10px; }
+        .nav-link { display: inline-block; margin: 0 10px; padding: 8px 15px; background: linear-gradient(45deg, #ff0000, #ff00ff); color: white; text-decoration: none; border: 2px solid #000; border-radius: 20px; font-weight: bold; text-shadow: 1px 1px 0 #000; transition: all 0.3s; }
+        .nav-link:hover, .nav-link:focus { transform: rotate(5deg) scale(1.1); background: linear-gradient(45deg, #00ff00, #00ffff); animation: wiggle 0.5s ease-in-out; outline: 3px solid #000080; }
+        .content { padding: 20px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><rect width="50" height="50" fill="%23fff"/><circle cx="25" cy="25" r="2" fill="%23ff0000"/></svg>'); }
+        .section { margin: 20px 0; padding: 15px; border: 3px solid; border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00) 1; background: rgba(255, 255, 255, 0.8); position: relative; }
+        .section-title { font-family: 'Orbitron', monospace; font-size: 2em; color: #800080; text-shadow: 2px 2px 0 #ffff00; margin-bottom: 15px; text-align: center; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .skill-item { background: linear-gradient(135deg, #ff00ff, #00ffff); color: white; padding: 10px; border: 2px solid #000; border-radius: 10px; text-align: center; font-weight: bold; text-shadow: 1px 1px 0 #000; animation: skillFloat 3s ease-in-out infinite; animation-delay: calc(var(--delay) * 0.2s); }
+        .experience-item { background: linear-gradient(90deg, #ffff00, #ff00ff); margin: 10px 0; padding: 15px; border: 2px dashed #000; border-radius: 15px; }
+        .job-title { font-weight: bold; font-size: 1.2em; color: #000080; text-shadow: 1px 1px 0 #fff; }
+        .company { font-style: italic; color: #800000; margin: 5px 0; }
+        .contact-section { background: linear-gradient(45deg, #00ff00, #ffff00); text-align: center; padding: 20px; border: 5px solid #ff0000; margin: 20px 0; }
+        .contact-info { font-size: 1.2em; font-weight: bold; margin: 10px 0; text-shadow: 1px 1px 0 #000; }
+        .marquee { background: #000; color: #00ff00; padding: 10px; white-space: nowrap; overflow: hidden; font-family: 'Courier New', monospace; }
+        .marquee-content { display: inline-block; animation: marqueeScroll 15s linear infinite; }
+        .footer { background: #000080; color: #ffff00; text-align: center; padding: 20px; border-top: 5px solid #ff0000; }
+        .visitor-counter { background: #000; color: #00ff00; display: inline-block; padding: 5px 10px; border: 2px solid #00ff00; font-family: 'Courier New', monospace; margin: 10px; }
+        .sparkle { position: absolute; width: 10px; height: 10px; background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'); background-size: contain; z-index: 9999; pointer-events: none; animation: sparkle-fade 1s forwards; }
+
+        /* Animation Keyframes */
+        @keyframes rainbowBackground { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes borderGlow { from { box-shadow: 0 0 20px #ff00ff; } to { box-shadow: 0 0 40px #00ffff; } }
+        @keyframes sparkleScroll { 0% { left: -100%; } 100% { left: 100%; } }
+        @keyframes titlePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes blinker { 50% { opacity: 0; } }
+        @keyframes wiggle { 0%, 100% { transform: rotate(5deg) scale(1.1); } 25% { transform: rotate(-5deg) scale(1.1); } 75% { transform: rotate(10deg) scale(1.1); } }
+        @keyframes skillFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        @keyframes sparkle-fade { to { opacity: 0; transform: scale(0.5) rotate(180deg); } }
+
+        /* Accessibility: Reduce Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .title { font-size: 2.5em; }
+            .section-title { font-size: 1.8em; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .nav-link { display: block; margin: 5px auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header" role="banner">
+            <h1 class="title">JMKod.es</h1>
+            <p class="subtitle">🚀 John McKay's Full Stack Development Empire 🚀</p>
+            <p class="blink">⚡ NOW ACCEPTING FREELANCE PROJECTS! ⚡</p>
+        </header>
+
+        <nav class="navigation" role="navigation" aria-label="Main Navigation">
+            <a href="#about" class="nav-link">👨‍💻 ABOUT</a>
+            <a href="#skills" class="nav-link">🛠️ SKILLS</a>
+            <a href="#experience" class="nav-link">💼 EXPERIENCE</a>
+            <a href="#contact" class="nav-link">📞 HIRE ME!</a>
+        </nav>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                *** WELCOME TO JMKOD.ES *** EXPERIENCED SOFTWARE DEVELOPER WITH A PASSION FOR CREATING INNOVATIVE SOLUTIONS *** C# • JAVASCRIPT • ANGULAR • NODE.JS • GO • AND SO MUCH MORE! ***
+            </div>
+        </div>
+
+        <main class="content" role="main">
+            <section id="about" class="section" aria-labelledby="about-title">
+                <h2 id="about-title" class="section-title">🌟 ABOUT THE CODE WIZARD 🌟</h2>
+                <p style="font-size: 1.1em; line-height: 1.6;">
+                    Greetings, internet traveler! I'm <strong>John McKay</strong>, an experienced software developer with a passion for creating innovative solutions using a universe of programming languages and technologies. I am a <span style="color: #ff0000; font-weight: bold;">FULL STACK SOFTWARE DEVELOPER</span> dedicated to delivering high-quality projects on time and within budget.
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1em;">
+                    🎯 Currently rocking it as <strong>Principal Software Developer</strong> at Reward Insight.<br>
+                    🚀 Co-founder of PT Pods (the future of fitness!).<br>
+                    💡 Over <strong>10+ YEARS</strong> of coding excellence.<br>
+                    🎓 Dedicated to teaching and mentoring the next generation of developers.
+                </p>
+            </section>
+
+            <section id="skills" class="section" aria-labelledby="skills-title">
+                <h2 id="skills-title" class="section-title">⚡ TECHNICAL SUPERPOWERS ⚡</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--delay: 1">🔥 C# / .NET</div>
+                    <div class="skill-item" style="--delay: 2">💫 JavaScript</div>
+                    <div class="skill-item" style="--delay: 3">🅰️ Angular</div>
+                    <div class="skill-item" style="--delay: 4">🟢 Node.js</div>
+                    <div class="skill-item" style="--delay: 5">📱 Ionic/Capacitor</div>
+                    <div class="skill-item" style="--delay: 6">☁️ Azure Cloud</div>
+                    <div class="skill-item" style="--delay: 7">🐧 Kali Linux</div>
+                    <div class="skill-item" style="--delay: 8">🧪 Automated Testing</div>
+                    <div class="skill-item" style="--delay: 9">👥 Mentoring</div>
+                    <div class="skill-item" style="--delay: 10">🏃‍♂️ Agile Development</div>
+                    <div class="skill-item" style="--delay: 11">☕ Java/Spring</div>
+                    <div class="skill-item" style="--delay: 12">🖼️ WPF</div>
+                    <div class="skill-item" style="--delay: 13">🔎 ElasticSearch</div>
+                    <div class="skill-item" style="--delay: 14">🐳 Docker</div>
+                    <div class="skill-item" style="--delay: 15">🐿️ Go (Intermediate)</div>
+                </div>
+            </section>
+
+            <section id="experience" class="section" aria-labelledby="experience-title">
+                <h2 id="experience-title" class="section-title">💼 WORK HISTORY 💼</h2>
+
+                <div class="experience-item">
+                    <div class="job-title">🏆 Principal Software Developer</div>
+                    <div class="company">Reward Insight (Aug 2021 - Current)</div>
+                    <p>Leading the R&D team, conducting first-round interviews, and mentoring developers. I took the lead on improving frontend accessibility (verified by a third party) and implemented a suite of automated Cypress tests.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">🚀 Co-Founder & Technical Lead</div>
+                    <div class="company">PT Pods (Feb 2021 - Current)</div>
+                    <p>As co-founder, I built our entire tech stack: the customer-facing app in Angular/Ionic for both iOS and Android, the Node.js backend on Firebase, and integrations with smart locks and payment systems like Stripe.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">💻 Full Stack Developer</div>
+                    <div class="company">Bludot Technologies (2020 - 2021)</div>
+                    <p>Wrote microservices with Go (and Go-Kit), developed a mobile app with Ionic/Capacitor, and built a search service using ElasticSearch.</p>
+                </div>
+                
+                <div class="experience-item" style="background: linear-gradient(90deg, #cccccc, #e6e6e6);">
+                    <div class="job-title" style="color: #333;">📜 Foundational Experience Includes...</div>
+                    <p style="color: #333; font-style: italic;">
+                        Further back in my career, I gained extensive experience developing for government contracts (DAERA, DEFRA), building FinTech and P2P lending platforms (Orca Money), and creating bespoke systems for the architectural and betting industries. Key technologies from this period include <strong>Vue.js, native iOS (Swift) & Android (Kotlin), Azure Service Bus, Redis, VB.Net,</strong> and <strong>CTI (Computer Telephony Integration).</strong>
+                    </p>
+                </div>
+
+            </section>
+
+            <section id="contact" class="contact-section" aria-labelledby="contact-title">
+                <h2 id="contact-title" class="section-title">📞 LET'S BUILD THE FUTURE! 📞</h2>
+                <p style="margin-top: 15px; font-weight: bold; font-size: 1.2em;">
+                    Ready to bring your project to life? Whether you need a full-stack powerhouse, a mentor for your team, or a technical wizard for your next big idea, I'm your developer.
+                </p>
+                <div class="contact-info">📧 john@codebelfast.com</div>
+                <div class="contact-info">📱 07469 780801</div>
+                <div class="contact-info">🌍 Bangor, Northern Ireland</div>
+                <div class="contact-info">💼 <a href="https://www.linkedin.com/in/john-mckay-2234a160/" target="_blank" rel="noopener noreferrer" style="color: #000080;">LinkedIn Profile</a></div>
+                <p style="margin-top: 20px; font-weight: bold; font-size: 1.3em;">
+                    Let's code something AMAZING together! 🎉
+                </p>
+            </section>
+        </main>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="data:image/gif;base64,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" alt="Animated under construction banner with a worker digging">
+        </div>
+
+        <footer class="footer" role="contentinfo">
+            <p>© 2025 JMKod.es - John McKay's Digital Empire</p>
+            <div class="visitor-counter">
+                👥 VISITOR COUNT: 1337 (and counting!)
+            </div>
+            <p style="margin-top: 10px;">
+                <span class="blink">✨ Made with ❤️ and LOTS of caffeine! ✨</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sparkle mouse trail
+            document.addEventListener('mousemove', function(e) {
+                let sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                document.body.appendChild(sparkle);
+                
+                sparkle.style.left = (e.pageX - 5) + 'px';
+                sparkle.style.top = (e.pageY - 5) + 'px';
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
