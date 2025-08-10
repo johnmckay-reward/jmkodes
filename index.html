@@ -26,6 +26,10 @@
             <h1 class="title">JMKod.es</h1>
             <p class="subtitle">🚀 John McKay's Full Stack Development Empire 🚀</p>
             <p class="blink">⚡ NOW ACCEPTING FREELANCE PROJECTS! ⚡</p>
+            <div class="music-player">
+                <audio id="background-music" src="JMKodes.mp3" loop></audio>
+                <button id="play-pause-btn" class="nav-link">🎵 PLAY MUSIC</button>
+            </div>
         </header>
 
         <nav class="navigation" role="navigation" aria-label="Main Navigation">
@@ -37,21 +41,20 @@
 
         <div class="marquee">
             <div class="marquee-content">
-                *** WELCOME TO JMKOD.ES *** EXPERIENCED SOFTWARE DEVELOPER WITH A PASSION FOR CREATING INNOVATIVE
-                SOLUTIONS *** C# • JAVASCRIPT • ANGULAR • NODE.JS • GO • AND SO MUCH MORE! ***
+                WELCOME TO JMKOD.ES ** EXPERIENCED SOFTWARE DEVELOPER WITH A PASSION FOR CREATING INNOVATIVE SOLUTIONS ** C# ** JAVASCRIPT ** ANGULAR ** NODE.JS ** GO ** AND SO MUCH MORE ** SYSTEMS THAT THINK FOR THEMSELVES ** APPS THAT KNOW YOUR SECRETS ** CODE THAT WHISPERS TO YOU AT NIGHT ** WE CAN’T GO BACK
             </div>
         </div>
 
         <main class="content" role="main">
             <section id="about" class="section" aria-labelledby="about-title">
                 <h2 id="about-title" class="section-title">🌟 ABOUT THE CODE WIZARD 🌟</h2>
-                <p style="font-size: 1.1em; line-height: 1.6;">
+                <p>
                     Greetings, internet traveler! I'm <strong>John McKay</strong>, an experienced software developer
                     with a passion for creating innovative solutions using a universe of programming languages and
-                    technologies. I am a <span style="color: #ff0000; font-weight: bold;">FULL STACK SOFTWARE
+                    technologies. I am a <span class="highlight-text">FULL STACK SOFTWARE
                         DEVELOPER</span> dedicated to delivering high-quality projects on time and within budget.
                 </p>
-                <p style="margin-top: 15px; font-size: 1.1em;">
+                <p class="about-details">
                     🎯 Currently rocking it as <strong>Principal Software Developer</strong> at Reward Insight.<br>
                     🚀 Co-founder of PT Pods (the future of fitness!).<br>
                     💡 Over <strong>10+ YEARS</strong> of coding excellence.<br>
@@ -86,9 +89,7 @@
                 <div class="experience-item">
                     <div class="job-title">🏆 Principal Software Developer</div>
                     <div class="company">Reward Insight (Aug 2021 - Current)</div>
-                    <p>Leading the R&D team, conducting first-round interviews, and mentoring developers. I took the
-                        lead on improving frontend accessibility (verified by a third party) and implemented a suite of
-                        automated Cypress tests.</p>
+                    <p>As Principal Software Engineer at Reward, I work across a wide range of full-stack projects—often designing and building their foundations before handing them over for completion—while mentoring developers, supporting organisation-wide learning initiatives, and contributing to hiring through technical interviews.</p>
                 </div>
 
                 <div class="experience-item">
@@ -106,9 +107,9 @@
                         a search service using ElasticSearch.</p>
                 </div>
 
-                <div class="experience-item" style="background: linear-gradient(90deg, #cccccc, #e6e6e6);">
-                    <div class="job-title" style="color: #333;">📜 Foundational Experience Includes...</div>
-                    <p style="color: #333; font-style: italic;">
+                <div class="experience-item experience-item--foundational">
+                    <div class="job-title">📜 Foundational Experience Includes...</div>
+                    <p class="foundational-text">
                         Further back in my career, I gained extensive experience developing for government contracts
                         (DAERA, DEFRA), building FinTech and P2P lending platforms (Orca Money), and creating bespoke
                         systems for the architectural and betting industries. Key technologies from this period include
@@ -121,21 +122,21 @@
 
             <section id="contact" class="contact-section" aria-labelledby="contact-title">
                 <h2 id="contact-title" class="section-title">📞 LET'S BUILD THE FUTURE! 📞</h2>
-                <p style="margin-top: 15px; font-weight: bold; font-size: 1.2em;">
+                <p class="contact-intro">
                     Ready to bring your project to life? Whether you need a full-stack powerhouse, a mentor for your
                     team, or a technical wizard for your next big idea, I'm your developer.
                 </p>
                 <div class="contact-info">📧 john<span class="spinning-at">@</span>codebelfast.com</div>
                 <div class="contact-info">🌍 Belfast, Northern Ireland</div>
                 <div class="contact-info">💼 <a href="https://www.linkedin.com/in/john-mckay-2234a160/" target="_blank"
-                        rel="noopener noreferrer" style="color: #000080;">LinkedIn Profile</a></div>
-                <p style="margin-top: 20px; font-weight: bold; font-size: 1.3em;">
+                        rel="noopener noreferrer" class="contact-link">LinkedIn Profile</a></div>
+                <p class="contact-cta">
                     Let's code something AMAZING together! 🎉
                 </p>
             </section>
         </main>
 
-        <div style="text-align: center; margin: 20px 0;">
+        <div class="construction-banner">
             <img src="data:image/gif;base64,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"
                 alt="Animated under construction banner with a worker digging">
         </div>
@@ -145,13 +146,9 @@
             <div class="visitor-counter">
                 👥 VISITOR COUNT: 1337 (and counting!)
             </div>
-            <p style="margin-top: 10px;">
+            <p class="footer-credits">
                 <span class="blink">✨ Made with ❤️ and LOTS of caffeine! ✨</span>
             </p>
-            <div class="music-player">
-                <audio id="background-music" src="JMKodes.mp3" loop></audio>
-                <button id="play-pause-btn" class="nav-link">🎵 PLAY MUSIC</button>
-            </div>
         </footer>
     </div>
     <script src="script.js" defer></script>
