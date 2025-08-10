@@ -7,110 +7,7 @@
     <meta name="description" content="John McKay, an experienced freelance software developer based in Belfast, NI. Specializing in C#, .NET, Angular, Node.js, and full-stack solutions. Available for hire!">
     <meta name="keywords" content="freelance developer, software developer, C#, .NET, JavaScript, Angular, Node.js, full stack, web developer, belfast, northern ireland, john mckay, jmkod.es">
     
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        /* --- THIS IS THE FIX --- */
-        /* Apply custom cursor to the body and interactive elements, not everything (*) */
-        body, a, button {
-            cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV5JREFUOE/tlU0oA1EUhM9/2B8wQRCr9Q8sLCwstLGwsNBYWNpqIwgWbFjoCyQtLQQjiGghWFhYKIgYWFjoG7+AYhAEf+A3sHk5yY1b2d3ZgV+228w3b/6+ZGa6ur/GbuuH14Tjscj6iOJz0mSRaC/zDCS9ApNb2W/Am8B2k72eEKIyAYfAdbDe5Ld2QBCyA3BrYNdM+wL2gIuH8zJ0eRj4Az4A7oA74dGcgQ2gDzgBXoDTq8kdYF9YvX6f0Q1IICeAOWB1WX+kJRcAz4F3wL3gCphd03Mgw8wB3wBnwFqT/aA1yG4CbwB7wLFwP4L1JIcK0ATcHZgCrgHzwLtwP/b54X0M/ADfS99S6Zz0nlwPdAflqYS7aWp3W0D/b1gTq60v4F5gL3gGfgOPgPtgP/A/eA7eC7yFLwK3gUvgS/Ae+A18Bb4dngffS1t/aB/3f4A/HwDC0AyrpGkAAAAASUVORK5CYII='), auto;
-        }
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
-            background-size: 400% 400%;
-            animation: rainbowBackground 8s ease infinite;
-            color: #000;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border: 5px solid #ff0000;
-            box-shadow: 0 0 20px #ff00ff;
-            animation: borderGlow 2s ease-in-out infinite alternate;
-        }
-        .header {
-            background: linear-gradient(90deg, #000080, #800080);
-            color: #ffff00;
-            text-align: center;
-            padding: 20px;
-            border-bottom: 5px dashed #ff0000;
-            position: relative;
-            overflow: hidden;
-        }
-        .header::before {
-            content: "⭐✨💫⭐✨💫⭐✨💫⭐✨💫⭐✨💫";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 200%;
-            animation: sparkleScroll 5s linear infinite;
-            font-size: 20px;
-        }
-        .title {
-            font-family: 'Orbitron', monospace;
-            font-size: 3em;
-            font-weight: 900;
-            text-shadow: 3px 3px 0 #ff0000, 6px 6px 0 #00ff00;
-            animation: titlePulse 2s ease-in-out infinite;
-            margin: 20px 0;
-        }
-        .subtitle { font-size: 1.2em; color: #00ffff; text-shadow: 2px 2px 0 #000; margin-bottom: 10px; }
-        .blink { animation: blinker 1s linear infinite; }
-        .navigation { background: #ffff00; border: 3px solid #ff0000; margin: 10px; text-align: center; padding: 10px; }
-        .nav-link { display: inline-block; margin: 0 10px; padding: 8px 15px; background: linear-gradient(45deg, #ff0000, #ff00ff); color: white; text-decoration: none; border: 2px solid #000; border-radius: 20px; font-weight: bold; text-shadow: 1px 1px 0 #000; transition: all 0.3s; }
-        .nav-link:hover, .nav-link:focus { transform: rotate(5deg) scale(1.1); background: linear-gradient(45deg, #00ff00, #00ffff); animation: wiggle 0.5s ease-in-out; outline: 3px solid #000080; }
-        .content { padding: 20px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><rect width="50" height="50" fill="%23fff"/><circle cx="25" cy="25" r="2" fill="%23ff0000"/></svg>'); }
-        .section { margin: 20px 0; padding: 15px; border: 3px solid; border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00) 1; background: rgba(255, 255, 255, 0.8); position: relative; }
-        .section-title { font-family: 'Orbitron', monospace; font-size: 2em; color: #800080; text-shadow: 2px 2px 0 #ffff00; margin-bottom: 15px; text-align: center; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-        .skill-item { background: linear-gradient(135deg, #ff00ff, #00ffff); color: white; padding: 10px; border: 2px solid #000; border-radius: 10px; text-align: center; font-weight: bold; text-shadow: 1px 1px 0 #000; animation: skillFloat 3s ease-in-out infinite; animation-delay: calc(var(--delay) * 0.2s); }
-        .experience-item { background: linear-gradient(90deg, #ffff00, #ff00ff); margin: 10px 0; padding: 15px; border: 2px dashed #000; border-radius: 15px; }
-        .job-title { font-weight: bold; font-size: 1.2em; color: #000080; text-shadow: 1px 1px 0 #fff; }
-        .company { font-style: italic; color: #800000; margin: 5px 0; }
-        .contact-section { background: linear-gradient(45deg, #00ff00, #ffff00); text-align: center; padding: 20px; border: 5px solid #ff0000; margin: 20px 0; }
-        .contact-info { font-size: 1.2em; font-weight: bold; margin: 10px 0; text-shadow: 1px 1px 0 #000; }
-        .marquee { background: #000; color: #00ff00; padding: 10px; white-space: nowrap; overflow: hidden; font-family: 'Courier New', monospace; }
-        .marquee-content { display: inline-block; animation: marqueeScroll 15s linear infinite; }
-        .footer { background: #000080; color: #ffff00; text-align: center; padding: 20px; border-top: 5px solid #ff0000; }
-        .visitor-counter { background: #000; color: #00ff00; display: inline-block; padding: 5px 10px; border: 2px solid #00ff00; font-family: 'Courier New', monospace; margin: 10px; }
-        .sparkle { position: absolute; width: 10px; height: 10px; background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'); background-size: contain; z-index: 9999; pointer-events: none; animation: sparkle-fade 1s forwards; }
-
-        /* Animation Keyframes */
-        @keyframes rainbowBackground { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes borderGlow { from { box-shadow: 0 0 20px #ff00ff; } to { box-shadow: 0 0 40px #00ffff; } }
-        @keyframes sparkleScroll { 0% { left: -100%; } 100% { left: 100%; } }
-        @keyframes titlePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        @keyframes blinker { 50% { opacity: 0; } }
-        @keyframes wiggle { 0%, 100% { transform: rotate(5deg) scale(1.1); } 25% { transform: rotate(-5deg) scale(1.1); } 75% { transform: rotate(10deg) scale(1.1); } }
-        @keyframes skillFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        @keyframes marqueeScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        @keyframes sparkle-fade { to { opacity: 0; transform: scale(0.5) rotate(180deg); } }
-
-        /* Accessibility: Reduce Motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-        
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .title { font-size: 2.5em; }
-            .section-title { font-size: 1.8em; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .nav-link { display: block; margin: 5px auto; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHN0eWxlPi5jdXJzb3IgeyBhbmltYXRpb246IGJsaW5rIDFzIHN0ZXAtZW5kIGluZmluaXRlOyB9IEBrZXlmcmFtZXMgYmxpbmsgeyA1MCUgeyBvcGFjaXR5OiAwOyB9IH08L3N0eWxlPjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0iYmxhY2siLz48dGV4dCB4PSI0IiB5PSIyMiIgZmlsbD0iIzAwZmYwMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxOCI+Jmd0OzwvdGV4dD48dGV4dCB4PSIxNCIgeT0iMjIiIGZpbGw9IiMwMGZmMDAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTgiIGNsYXNzPSJjdXJzb3IiPl88L3RleHQ+PC9zdmc+">
 </head>
@@ -205,7 +102,7 @@
                 <p style="margin-top: 15px; font-weight: bold; font-size: 1.2em;">
                     Ready to bring your project to life? Whether you need a full-stack powerhouse, a mentor for your team, or a technical wizard for your next big idea, I'm your developer.
                 </p>
-                <div class="contact-info">📧 john@codebelfast.com</div>
+                <div class="contact-info">📧 john<span class="spinning-at">@</span>codebelfast.com</div>
                 <div class="contact-info">🌍 Belfast, Northern Ireland</div>
                 <div class="contact-info">💼 <a href="https://www.linkedin.com/in/john-mckay-2234a160/" target="_blank" rel="noopener noreferrer" style="color: #000080;">LinkedIn Profile</a></div>
                 <p style="margin-top: 20px; font-weight: bold; font-size: 1.3em;">
@@ -226,24 +123,12 @@
             <p style="margin-top: 10px;">
                 <span class="blink">✨ Made with ❤️ and LOTS of caffeine! ✨</span>
             </p>
+            <div class="music-player">
+                <audio id="background-music" src="YOUR_MP3_FILE_HERE.mp3" loop></audio>
+                <button id="play-pause-btn" class="nav-link">🎵 PLAY MUSIC</button>
+            </div>
         </footer>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sparkle mouse trail
-            document.addEventListener('mousemove', function(e) {
-                let sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                document.body.appendChild(sparkle);
-                
-                sparkle.style.left = (e.pageX - 5) + 'px';
-                sparkle.style.top = (e.pageY - 5) + 'px';
-                
-                setTimeout(() => {
-                    sparkle.remove();
-                }, 1000);
-            });
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
