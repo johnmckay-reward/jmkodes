@@ -252,7 +252,7 @@ body {
 
 .marquee-content {
     display: inline-block;
-    animation: marqueeScroll 30s linear infinite;
+    animation: marqueeScroll 20s linear infinite;
 }
 
 .construction-banner {
