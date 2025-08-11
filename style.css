@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+    font-family:  'Comic Sans MS', 'Comic Neue', cursive, sans-serif;
     /* The rainbow background is replaced by the Matrix canvas */
     /* background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000); */
     /* background-size: 400% 400%; */
