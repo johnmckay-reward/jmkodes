@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // "Welcome!" Popup
-    // alert("WELCOME 2 JMKOD.ES!! UR THE 1337th VISITOR!!1!");
-
     // Sparkle mouse trail
     document.addEventListener('mousemove', function(e) {
         let sparkle = document.createElement('div');
@@ -99,7 +96,10 @@ const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft',
 let konamiIndex = 0;
 
 document.addEventListener('keydown', function(e) {
-    if (e.key.toLowerCase() === konamiCode[konamiIndex]) {
+    const keyToLowerCase = e.key.toLowerCase();
+    const konamiKeyToLowerCase = konamiCode[konamiIndex].toLowerCase();
+
+    if (keyToLowerCase === konamiKeyToLowerCase) {
         konamiIndex++;
         if (konamiIndex === konamiCode.length) {
             konamiIndex = 0; // Reset for next time
@@ -107,6 +107,7 @@ document.addEventListener('keydown', function(e) {
             document.body.style.transform = document.body.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
         }
     } else {
+        debugger
         konamiIndex = 0; // Wrong key, reset
     }
 });
