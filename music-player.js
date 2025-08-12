@@ -16,6 +16,13 @@ const songs = [
     songsDirectory + 'seven.mp3',
     songsDirectory + 'eight.mp3',
     songsDirectory + 'nine.mp3',
+    songsDirectory + 'ten.mp3',
+    songsDirectory + 'eleven.mp3',
+    songsDirectory + 'twelve.mp3',
+    songsDirectory + 'thirteen.mp3',
+    songsDirectory + 'fourteen.mp3',
+    songsDirectory + 'fifteen.mp3',
+    songsDirectory + 'sixteen.mp3',
 ];
 // --- CONFIGURATION ---
 const FADE_DURATION = 2; // How long to fade in/out (in seconds)
@@ -118,3 +125,9 @@ playPauseBtn.addEventListener('click', () => {
 // --- 5. INITIALIZATION ---
 shuffle(shuffledPlaylist);
 activeAudio.src = shuffledPlaylist[currentTrackIndex];
+
+function changeToRandomTrack() {
+    currentTrackIndex = Math.floor(Math.random() * shuffledPlaylist.length);
+    activeAudio.src = shuffledPlaylist[currentTrackIndex];
+    activeAudio.play();
+}

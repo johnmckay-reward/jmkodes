@@ -122,7 +122,7 @@ async function createTerminal() {
   whoami        - Displays your current user identity
   matrix        - Toggles the background matrix effect
   hire          - Displays contact information
-  cowsay [msg]  - A cow says your message
+  change-song   - Changes the currently playing song
   drink-beer    - Try it and see 🍺
   make-sandwich - Makes a sandwich
   hack [target] - Hacks the target`
@@ -366,6 +366,14 @@ End of file. This message will self-destruct. (Not really).
                 await typeEffect(`rm: cannot remove '${args.join(' ')}': Permission denied.`);
             }
         },
+        'change-song': async () => {
+            if (typeof changeToRandomTrack === 'function') {
+                changeToRandomTrack();
+                await typeEffect('Enjoy the music! 🎶');
+            } else {
+                await typeEffect('No music player available.');
+            }
+        }
     };
 
     // --- Main Command Handler ---
