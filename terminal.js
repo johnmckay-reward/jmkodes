@@ -182,7 +182,7 @@ async function createTerminal() {
 [________________]
                 `;
                 await typeEffect(sandwichAsciiArt, 5);
-                await typeEffect("Here's your sandwich, champ.");
+                await typeEffect("Here's your sandwich, big lad.");
             } else {
                 await typeEffect("What? Make it yourself.");
             }
