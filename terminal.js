@@ -245,10 +245,10 @@ End of file. This message will self-destruct. (Not really).
 `;
                     await typeEffect(secretContent, 10);
                 } else {
-                    await typeEffect(`vim: "${fileToOpen}" is not readable.`);
+                    await typeEffect(`vim: "${fileToOpen}" not found.`);
                 }
             } else {
-                await typeEffect(`No chance. Last time you used Vim it took 3 hours to exit.`);
+                await typeEffect(`No file selected.`);
             }
         },
         'vi': (args, isSudo) => commandMap.vim(args, isSudo),
