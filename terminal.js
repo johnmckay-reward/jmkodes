@@ -245,7 +245,7 @@ End of file. This message will self-destruct. (Not really).
 `;
                     await typeEffect(secretContent, 10);
                 } else {
-                    await typeEffect(`vim: "${fileToOpen}" not found.`);
+                    await typeEffect(`"${fileToOpen}" not found.`);
                 }
             } else {
                 await typeEffect(`No file selected.`);
