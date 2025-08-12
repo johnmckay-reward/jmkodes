@@ -249,12 +249,22 @@ End of file. This message will self-destruct. (Not really).
                     await typeEffect(`"${fileToOpen}" not found.`);
                 }
             } else {
-                await typeEffect(`No file selected.`);
+
+                if (fileToOpen){
+                    await typeEffect(`"${fileToOpen}" not found.`);
+                } else {
+                   await typeEffect(`No file selected.`);
+                }
             }
         },
         'vi': (args, isSudo) => commandMap.vim(args, isSudo),
         'neovim': (args, isSudo) => commandMap.vim(args, isSudo),
         'emacs': (args, isSudo) => commandMap.vim(args, isSudo),
+        'cat': async (args, isSudo) => { commandMap.vim(args, isSudo); },
+        'more': async (args, isSudo) => { commandMap.vim(args, isSudo); },
+        'less': async (args, isSudo) => { commandMap.vim(args, isSudo); },
+        'head': async (args, isSudo) => { commandMap.vim(args, isSudo); },
+        'tail': async (args, isSudo) => { commandMap.vim(args, isSudo); },
         'chmod': async (args, isSudo) => {
             const targetFile = args.find(arg => arg.includes('passwords'));
             if (isSudo) {
