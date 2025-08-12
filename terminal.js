@@ -351,7 +351,7 @@ End of file. This message will self-destruct. (Not really).
                 commandMap.clear();
 
                 // 3. Wait for a few seconds for the panic to set in
-                await new Promise(res => setTimeout(res, 75000));
+                await new Promise(res => setTimeout(res, 7500));
 
                 // 4. Hide the BSOD and bring back the terminal
                 bsodScreen.style.display = 'none';
