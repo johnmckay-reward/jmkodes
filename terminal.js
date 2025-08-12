@@ -125,6 +125,7 @@ async function createTerminal() {
   change-song   - Changes the currently playing song
   drink-beer    - Try it and see 🍺
   make-sandwich - Makes a sandwich
+  login         - Logs in as admin
   hack [target] - Hacks the target`
             );
         },
