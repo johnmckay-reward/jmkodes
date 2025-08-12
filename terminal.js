@@ -348,8 +348,10 @@ End of file. This message will self-destruct. (Not really).
                 terminalWindow.style.display = 'none'; // Hide the terminal first
                 bsodScreen.style.display = 'block'; // Show the BSOD!
 
+                commandMap.clear();
+
                 // 3. Wait for a few seconds for the panic to set in
-                await new Promise(res => setTimeout(res, 10000));
+                await new Promise(res => setTimeout(res, 75000));
 
                 // 4. Hide the BSOD and bring back the terminal
                 bsodScreen.style.display = 'none';
@@ -357,6 +359,7 @@ End of file. This message will self-destruct. (Not really).
 
                 // 5. Reveal the joke
                 await new Promise(res => setTimeout(res, 1000));
+
                 await typeEffect('Just kidding. But my heart skipped a beat. Did yours?');
 
             } else {
