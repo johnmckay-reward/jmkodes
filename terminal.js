@@ -349,14 +349,13 @@ End of file. This message will self-destruct. (Not really).
                 bsodScreen.style.display = 'block'; // Show the BSOD!
 
                 // 3. Wait for a few seconds for the panic to set in
-                await new Promise(res => setTimeout(res, 4000));
+                await new Promise(res => setTimeout(res, 10000));
 
                 // 4. Hide the BSOD and bring back the terminal
                 bsodScreen.style.display = 'none';
                 terminalWindow.style.display = 'block';
 
                 // 5. Reveal the joke
-                await typeEffect('Rebooting from backup...', 50);
                 await new Promise(res => setTimeout(res, 1000));
                 await typeEffect('Just kidding. But my heart skipped a beat. Did yours?');
 
